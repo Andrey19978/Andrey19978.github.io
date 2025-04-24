@@ -92,6 +92,10 @@ a {
 
 .div2 {
     grid-area: 1 / 2 / 3 / 3;
+position: relative;
+width: 243px; /* Размер фото */
+height: 243px;
+margin: 50px;
 }
 
 .parent2 {
@@ -259,3 +263,147 @@ a {
     margin-top: 30px;
     width: 45%;
 }
+
+
+.photo {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    z-index: 2;
+}
+.photo-background {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background-color: #EDF7FA; /* Цвет фонового круга */
+    top: 10px; /* Сдвиг вниз */
+    right: 10px; /* Сдвиг вправо */
+    z-index: 1;
+}
+
+/* ========== Адаптивность ========== */
+
+/* Планшеты (768px - 1023px) */
+@media (max-width: 1023px) {
+    .container {
+      margin-right: 50px;
+    }
+    
+    .parent {
+      width: 100%;
+      padding: 0 20px;
+      grid-template-columns: 1fr;
+      text-align: center;
+    }
+    
+    .div1 {
+      margin-left: 0;
+      width: 100%;
+      max-width: 600px;
+    }
+    
+    .div2 {
+      margin: 30px auto;
+    }
+    
+    .parent2 {
+      width: 100%;
+      padding: 0 20px;
+      grid-template-columns: 1fr;
+    }
+    
+    .div12, 
+    .div22 {
+      margin-left: 0;
+      width: 100%;
+      max-width: 600px;
+    }
+    
+    .portfolio {
+      margin-left: 20px;
+    }
+    
+    .portfolio_projects {
+      width: 100%;
+      max-width: 600px;
+    }
+    
+    .photo_sunflo, 
+    .photo_Spa {
+      margin-left: 0;
+      width: 100%;
+    }
+  }
+  
+  /* Мобильные (до 767px) */
+  @media (max-width: 767px) {
+    .container {
+      margin-right: 20px;
+      margin-top: 20px;
+    }
+    
+    .heder__list {
+      gap: 15px;
+    }
+    
+    .div1 h1 {
+      font-size: 32px;
+      line-height: 1.2;
+    }
+    
+    .parent {
+      margin-top: 20px;
+    }
+    
+    .div2 {
+      width: 180px;
+      height: 180px;
+    }
+    
+    .parent2 {
+      margin-top: 50px;
+      grid-template-rows: auto;
+      height: auto;
+    }
+    
+    .skills-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .portfolio_projects h1 {
+      font-size: 18px;
+    }
+    
+    .portfolio_footer {
+      width: 100%;
+    }
+  }
+  
+  /* Очень маленькие экраны (до 479px) */
+  @media (max-width: 479px) {
+    .heder__list {
+      flex-direction: column;
+      align-items: flex-end;
+      gap: 10px;
+    }
+    
+    .div1 h1 {
+      font-size: 28px;
+    }
+    
+    .div1 button {
+      width: 100%;
+    }
+    
+    .div2 {
+      width: 150px;
+      height: 150px;
+    }
+    
+    .skills-grid {
+      grid-template-columns: 1fr;
+    }
+  }
