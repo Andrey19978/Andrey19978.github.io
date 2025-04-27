@@ -21,13 +21,13 @@
                     <span></span>
                 </div>
                 <ul class="heder__list">
-                    <li><a class="activ" href="#!">О себе</a></li>
-                    <li><a href="#!">Портфолио</a></li>
-                    <li><a href="#!">Контакты</a></li>
+                    <li><a class="activ" href="#!" data-target="section2">О себе</a></li>
+                    <li><a href="#!" data-target="section3">Портфолио</a></li>
+                    <li><a href="#portfolio_footer" data-target="section1">Контакты</a></li>
                 </ul>
             </nav>
         </div>
-        <div class="parent">
+        <div class="parent" data-section="section2">
             <div class="div1">
                 <h1> Привет, я Андрей, фронтенд-разработчик.</h1>
                 <br>
@@ -99,7 +99,7 @@
                 <div class="div42"><a>View all</a></div>
             </div>
         </div>
-        <section class="portfolio">
+        <section class="portfolio" data-section="section3">
             <h2>Featured works</h2>
             <article class="portfolio_projects">
                 <h1>Автофермер для Sunflower Land
@@ -157,8 +157,22 @@
             </article>
           </section>
     </main>
-    <footer class="portfolio_footer">
-        <h2>Copyright ©2020 All rights reserved</h2>
+    <footer class="portfolio_footer" data-section="section1">
+        <div class="contacts">
+            <h2>Контакты</h2>
+            <div class="contact-item">
+                <i class="fas fa-envelope"></i>
+                <a href="mailto:andros.g@mail.com">@Mail: andros.g@mail.com</a>
+            </div>
+            <div class="contact-item">
+                <i class="fas fa-phone"></i>
+                <a href="tel:+79026886194">Телефон: +7 (902) 688-61-94</a>
+            </div>
+            <div class="contact-item">
+                <i class="fab fa-telegram"></i>
+                <a href="https://t.me/Andrey_Gorya">Telegram: @Andrey_Gorya</a>
+            </div>
+        </div>
     </footer>
 
 </body>

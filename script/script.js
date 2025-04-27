@@ -15,3 +15,12 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 });
+
+
+document.querySelectorAll('a[data-target]').forEach(link => {
+    link.addEventListener('click', function(e) {
+      e.preventDefault();
+      const target = document.querySelector(`[data-section="${this.dataset.target}"]`);
+      target.scrollIntoView({ behavior: 'smooth' });
+    });
+  });
