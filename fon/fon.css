@@ -50,6 +50,7 @@ a {
 }
 
 .div1 button {
+    display: none;
     font-family: "Heebo";
     font-size: 20px;
     width: 208px;
@@ -207,11 +208,8 @@ a {
 
 .portfolio_footer {
     margin-top: 50px;
-    font-family: "Heebo";
-    width: 1152px;
-    height: 182px;
-    top: 1859px;
-    text-align: center;
+width: 1279px;
+background-color: #f9f9f9;
 }
 
 .skills {
@@ -395,6 +393,10 @@ max-height: 300px;
         text-align: center;
     }
 
+    .div1 button{
+        display: none;
+    }
+
     .div2 {
         grid-area: 1 / 1 / 2 / 2;
         width: 180px;
@@ -459,6 +461,24 @@ max-height: 300px;
         width: 100%;
         margin-bottom: 50px;
     }
+
+    .contacts {
+        font-family: "Heebo", sans-serif;
+        max-width: 650px;
+        margin: 0 auto;
+        padding: 20px;
+        background: #f9f9f9;
+        border-radius: 8px;
+        text-align: center;
+    max-height: 300px;
+    }
+    
+    .contact-item {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        margin: 15px 0;
+    }
 }
 
 /* Очень маленькие экраны (до 479px) */
@@ -467,6 +487,8 @@ max-height: 300px;
         flex-direction: column;
         align-items: flex-end;
         gap: 10px;
+        width: 170px;
+        height: 29vh;
     }
 
     .div1 h1 {
@@ -531,6 +553,8 @@ max-height: 300px;
     }
 
     .heder__list.active {
+        width: 159px;
+        height: 1rem;
         left: 0px;
         /* Показываем меню */
         display: flex;
@@ -564,7 +588,7 @@ max-height: 300px;
         top: 0;
         left: 0;
         right: 255px;
-        height: 266px;
+        height: 260px;
         background: #94949495;
         z-index: -1;
         opacity: 0;
