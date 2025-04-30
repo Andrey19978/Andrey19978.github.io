@@ -108,9 +108,11 @@ a {
     grid-column-gap: 0px;
     grid-row-gap: 0px;
     width: 1279px;
-    height: 400px;
+    height: 460px;
     margin-top: 100px;
     background-color: #EDF7FA;
+    padding-bottom: 30px;
+
 }
 
 .div12 {
@@ -118,8 +120,9 @@ a {
     margin-left: 155px;
     background-color: #FFFFFF;
     width: 418px;
-    height: 295px;
+    height: 400px;
     margin-top: -30px;
+    padding-bottom: 30px;
 }
 
 .div22 {
@@ -133,7 +136,7 @@ a {
 }
 
 .div22 img {
-    max-width: 100%;
+    max-width: 101%;
     /* Не превышает ширину контейнера */
     max-height: 100%;
     /* Не превышает высоту контейнера */
@@ -211,6 +214,54 @@ a {
 width: 1279px;
 background-color: #f9f9f9;
 }
+
+.contacts-footer {
+    background: #2c3e50;
+    color: white;
+    padding: 40px 0;
+    text-align: center;
+    margin-top: 50px; /* Отступ от предыдущего блока */
+  }
+  
+  .contacts-footer h2 {
+    margin-bottom: 20px;
+    font-size: 1.8rem;
+  }
+  
+  .social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  .icon-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(5px);
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  }
+  
+  .icon-link:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: scale(1.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Цвета иконок при наведении */
+  .fa-telegram:hover { color: #0088cc; }
+  .fa-whatsapp:hover { color: #25D366; }
+  .fa-envelope:hover { color: #EA4335; }
+  
+  .copyright {
+    margin-top: 20px;
+    font-size: 0.9rem;
+    opacity: 0.8;
+  }
 
 .skills {
     padding: 2rem;
@@ -310,7 +361,7 @@ max-height: 300px;
 /* ========== Адаптивность ========== */
 
 /* Планшеты (768px - 1023px) */
-@media (max-width: 1023px) {
+/* @media (max-width: 1023px) {
     .container {
         margin-right: 50px;
     }
@@ -359,10 +410,10 @@ max-height: 300px;
         margin-left: 0;
         width: 100%;
     }
-}
+} */
 
 /* Мобильные (до 767px) */
-@media (max-width: 767px) {
+/* @media (max-width: 767px) {
     .container {
         margin-right: 20px;
         margin-top: 20px;
@@ -419,7 +470,7 @@ max-height: 300px;
         grid-area: 1 / 1 / 2 / 2;
         background-color: #FFFFFF;
         width: 333px;
-        height: 677px;
+        height: 950px;
         margin-top: 30px;
         margin-bottom: 30px;
     }
@@ -459,7 +510,6 @@ max-height: 300px;
 
     .portfolio_footer {
         width: 100%;
-        margin-bottom: 50px;
     }
 
     .contacts {
@@ -479,10 +529,10 @@ max-height: 300px;
         gap: 15px;
         margin: 15px 0;
     }
-}
+} */
 
 /* Очень маленькие экраны (до 479px) */
-@media (max-width: 479px) {
+/* @media (max-width: 479px) {
     .heder__list {
         flex-direction: column;
         align-items: flex-end;
@@ -507,9 +557,15 @@ max-height: 300px;
     .skills-grid {
         grid-template-columns: 1fr;
     }
-}
 
-/* Бургер-меню (общие стили) */
+    .heder__list.active {
+        width: 159px;
+        height: 16em;
+        left: 0px;
+        display: flex;
+    }
+} */
+
 .burger-menu {
     display: none;
     flex-direction: column;
@@ -531,7 +587,7 @@ max-height: 300px;
 }
 
 /* Мобильная версия */
-@media (max-width: 768px) {
+/* @media (max-width: 768px) {
     .burger-menu {
         display: flex;
     }
@@ -541,7 +597,6 @@ max-height: 300px;
         position: fixed;
         top: 0;
         right: -250px;
-        /* Скрываем за пределами экрана */
         width: 170px;
         height: 45vh;
         background-color: #fff;
@@ -553,10 +608,9 @@ max-height: 300px;
     }
 
     .heder__list.active {
-        width: 159px;
-        height: 1rem;
+right: 16em;
+        height: 16em;
         left: 0px;
-        /* Показываем меню */
         display: flex;
     }
 
@@ -568,7 +622,6 @@ max-height: 300px;
         color: #272727c5;
     }
 
-    /* Анимация бургера */
     .burger-menu.active span:nth-child(1) {
         transform: rotate(45deg) translate(5px, 6px);
     }
@@ -581,14 +634,13 @@ max-height: 300px;
         transform: rotate(-45deg) translate(5px, -6px);
     }
 
-    /* Затемнение фона */
     .heder__list::before {
         content: '';
         position: fixed;
         top: 0;
         left: 0;
-        right: 255px;
-        height: 260px;
+        right: 16em;
+        height: 16em;
         background: #94949495;
         z-index: -1;
         opacity: 0;
@@ -597,5 +649,262 @@ max-height: 300px;
 
     .heder__list.active::before {
         opacity: 1;
+    }
+} */
+
+@media (min-width: 768px) { /* Десктоп */ 
+
+}
+@media (min-width: 480px) and (max-width: 767px) { /* Планшеты */ 
+
+}
+@media (max-width: 479px) { /* Мобильные */ 
+    
+    .burger-menu {
+        display: flex;
+    }
+
+    .heder__list {
+        display: none;
+        position: fixed;
+        top: 0;
+        right: -250px;
+        width: 170px;
+        height: 45vh;
+        background-color: #fff;
+        flex-direction: column;
+        padding: 70px 20px 20px;
+        box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
+        transition: right 0.3s ease;
+        z-index: 90;
+    }
+
+    .heder__list li {
+        margin: 1vh -9px;
+    }
+
+    .heder__list a {
+        color: #272727c5;
+    }
+
+    .burger-menu.active span:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 6px);
+    }
+
+    .burger-menu.active span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .burger-menu.active span:nth-child(3) {
+        transform: rotate(-45deg) translate(5px, -6px);
+    }
+
+    .heder__list::before {
+        content: '';
+        position: fixed;
+        top: 0;
+        left: 0;
+width: 14vh;
+        height: 29vh;
+        background: #94949495;
+        z-index: -1;
+        transition: opacity 0.3s;
+    }
+
+    .heder__list.active::before {
+        opacity: 1;
+    }
+
+    .container {
+        margin-right: 20px;
+        margin-top: 20px;
+    }
+
+    .heder__list {
+        gap: 15px;
+    }
+
+    .div1 h1 {
+        font-size: 32px;
+        line-height: 1.2;
+    }
+
+    .parent {
+        margin-top: 20px;
+        display: grid;
+        grid-template-rows: repeat(2, 1fr);
+        grid-column-gap: 0px;
+        grid-row-gap: 0px;
+        height: 420px;
+    }
+
+    .div1 {
+        font-family: "Heebo";
+        grid-area: 2 / 1 / 3 / 2;
+        text-align: center;
+    }
+
+    .div1 button{
+        display: none;
+    }
+
+    .div2 {
+        grid-area: 1 / 1 / 2 / 2;
+        width: 180px;
+        height: 180px;
+    }
+
+    .parent2 {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(3, 1fr);
+        grid-column-gap: 0px;
+        grid-row-gap: 0px;
+        margin-top: 180px;
+        grid-template-rows: auto;
+        height: auto;
+        place-items: center;
+    }
+
+    .div12 {
+        grid-area: 1 / 1 / 2 / 2;
+        background-color: #FFFFFF;
+        width: 333px;
+        height: 950px;
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+
+
+    .div22 {
+        grid-area: 2 / 1 / 3 / 2;
+        margin-top: 30px;
+        margin-bottom: 30px;
+        height: 258px;
+        max-width: 367px;
+    }
+
+    .div32 {
+        display: none;
+    }
+
+    .div42 {
+        display: none;
+    }
+
+
+    .skills-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .portfolio h2{
+        text-align: center;
+    }
+
+    .portfolio_projects h1 {
+        font-size: 18px;
+    }
+
+    .portfolio_footer {
+        width: 100%;
+    }
+
+    .contacts {
+        font-family: "Heebo", sans-serif;
+        max-width: 650px;
+        margin: 0 auto;
+        padding: 20px;
+        background: #f9f9f9;
+        border-radius: 8px;
+        text-align: center;
+    max-height: 300px;
+    }
+    
+    .contact-item {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        margin: 15px 0;
+    }
+
+
+    .heder__list {
+        flex-direction: column;
+        align-items: flex-end;
+        gap: 10px;
+        width: 170px;
+        height: 29vh;
+    }
+
+    .div1 h1 {
+        font-size: 28px;
+    }
+
+    .div1 button {
+        width: 100%;
+    }
+
+    .div2 {
+        width: 150px;
+        height: 150px;
+    }
+
+    .skills-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .heder__list.active {
+        width: 14vh;
+        height: 29vh;
+        left: 0px;
+        display: flex;
+    }
+
+    .container {
+        margin-right: 50px;
+    }
+
+    .parent {
+        width: 100%;
+        padding: 0 20px;
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .div1 {
+        margin-left: 0;
+        width: 100%;
+        max-width: 600px;
+    }
+
+    .div2 {
+        margin: 30px auto;
+    }
+
+    .parent2 {
+        width: 100%;
+        padding: 0 20px;
+        grid-template-columns: 1fr;
+    }
+
+    .div12,
+    .div22 {
+        margin-left: 0;
+        width: 100%;
+        max-width: 600px;
+    }
+
+    .portfolio {
+        margin-left: 20px;
+    }
+
+    .portfolio_projects{
+        width: 100%;
+        max-width: 42vh;
+    }
+
+    .photo_sunflo,
+    .photo_Spa {
+        margin-left: 0;
+        width: 100%;
     }
 }
